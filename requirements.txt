@@ -1,0 +1,9 @@
+# Post-processing and analysis. VASP and phonopy are installed separately.
+numpy>=1.24
+scipy>=1.10
+matplotlib>=3.7
+seaborn>=0.13
+PyYAML>=6.0
+# phonopy >= 2.20 is required; install with conda or pip:
+#   conda install -c conda-forge phonopy
+phonopy>=2.20

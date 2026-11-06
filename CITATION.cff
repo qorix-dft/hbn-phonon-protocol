@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+title: "hbn-phonon-protocol: a validated workflow for benchmarking machine-learned force fields against ab initio phonons"
+message: "If you use this protocol or its scripts, please cite it."
+type: software
+authors:
+  - given-names: ""
+    family-names: ""
+    affiliation: "The University of Queensland"
+repository-code: "https://github.com/<user>/hbn-phonon-protocol"
+license: MIT
+keywords:
+  - phonons
+  - machine-learned force field
+  - hexagonal boron nitride
+  - VASP
+  - phonopy
+references:
+  - type: article
+    title: "First principles phonon calculations in materials science"
+    authors:
+      - family-names: Togo
+        given-names: Atsushi
+      - family-names: Tanaka
+        given-names: Isao
+    journal: "Scripta Materialia"
+    volume: 108
+    start: 1
+    end: 5
+    year: 2015
+    doi: 10.1016/j.scriptamat.2015.07.021

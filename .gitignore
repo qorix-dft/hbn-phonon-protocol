@@ -1,0 +1,49 @@
+# VASP output — never commit these
+WAVECAR
+CHGCAR
+CHG
+vasprun.xml
+OUTCAR
+OSZICAR
+EIGENVAL
+DOSCAR
+PROCAR
+PCDAT
+XDATCAR
+IBZKPT
+REPORT
+vaspout.h5
+vaspwave.h5
+ML_ABN
+ML_FFN
+ML_HEAT
+ML_LOGFILE
+ML_REG
+ML_AB
+ML_FF
+
+# POTCAR is licensed; do not redistribute
+POTCAR
+
+# phonopy intermediates
+FORCE_SETS
+FORCE_CONSTANTS
+force_constants.hdf5
+phonopy_disp.yaml
+phonopy.yaml
+band.yaml
+mesh.yaml
+qpoints.yaml
+
+# run trees
+disp-*/
+supercell_conv/
+*_ai/
+*_ml_ai/
+*_ml_ml/
+
+# python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/

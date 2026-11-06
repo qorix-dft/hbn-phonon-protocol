@@ -1,0 +1,118 @@
+% =====================================================================
+%  Table 1.
+%
+%  Format: DFT [MLFF], cm^-1, two decimals throughout.
+%  Supercells, matched between branches: bulk 4x4x2, monolayer 8x8x1,
+%  bilayer 6x6x1, trilayer 4x4x1. Gamma frequencies are converged to
+%  <0.05 cm^-1 across these sizes.
+%
+%  MLFF values are at the force field's OWN relaxed geometry (_ml_ml).
+%  That is what it predicts when handed the material, so it is the number
+%  that belongs beside an experimental value. Evaluating it instead on the
+%  DFT geometry isolates the force-constant error and gives a LARGER bulk
+%  shear discrepancy (-26.6 % against -18.6 %): the geometric and curvature
+%  errors partially cancel. Keep that decomposition in the text.
+%
+%  Bulk uses the non-analytic term correction with the Born charges and
+%  electronic dielectric tensor computed here (Z*_B = +2.713,
+%  eps_inf = 4.802 / 2.749), applied to BOTH branches -- the force field
+%  does not produce Born charges. LO-TO splitting: 235.33 cm^-1 (DFT),
+%  236.14 (MLFF), against 243 measured.
+%
+%  Preamble needs \usepackage{makecell} and \usepackage{threeparttable}.
+%  If it overflows, change \scriptsize to \tiny on the marked line.
+% =====================================================================
+
+\begin{table*}[htbp]
+\centering
+\begin{threeparttable}
+\caption{Calculated $\Gamma$-point phonon frequencies (cm$^{-1}$) for bulk,
+monolayer, bilayer and trilayer $h$-BN, compared with experimental Raman and
+infrared data for bulk $h$-BN. Values are given as DFT\,[MLFF], with the
+irreducible representation of each mode in parentheses; machine-learned force
+field values are evaluated at its own relaxed geometry. The non-analytic term
+correction is applied to bulk only, using Born effective charges and the
+electronic dielectric tensor computed in this work; in a two-dimensional
+system the LO--TO splitting vanishes at $\Gamma$ and grows linearly in $q$, so
+the in-plane optical manifolds of the slabs remain degenerate at the zone
+centre. Frequencies are converged to better than $0.05$~cm$^{-1}$ with respect
+to supercell size.}
+\label{tab:phonons}
+% <-- change \scriptsize to \tiny here if the table overflows
+\scriptsize
+\setlength{\tabcolsep}{2pt}
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{C{0.85cm}C{2.7cm}C{3.1cm}C{2.4cm}C{2.9cm}C{3.0cm}}
+\toprule
+Mode & \makecell{Expt.\ (prev.\ calc.\tnote{a}) \\ $\omega$ (cm$^{-1}$)}
+     & \makecell{Bulk \\ DFT\,[MLFF] (Sym.)}
+     & \makecell{Monolayer \\ DFT\,[MLFF] (Sym.)}
+     & \makecell{Bilayer \\ DFT\,[MLFF] (Sym.)}
+     & \makecell{Trilayer \\ DFT\,[MLFF] (Sym.)} \\
+\midrule
+
+Shear
+  & $51.8^{\rm b}\,(52.43)$
+  & $48.87\,[39.77]\,(E_{2g})$
+  & --
+  & $30.00\,[34.99]\,(E_{g})$
+  & \makecell{$22.05\,[27.83]\,(E'')$ \\ $37.97\,[46.26]\,(E')$} \\
+
+Breathing
+  & Silent $(120.98)$
+  & $126.23\,[118.46]\,(B_{1g})$
+  & --
+  & $76.29\,[79.78]\,(A_{1g})$
+  & \makecell{$55.26\,[57.89]\,(A_1')$ \\ $97.27\,[99.32]\,(A_2'')$} \\
+
+ZO
+  & $783^{\rm c}\,(746.87)$
+  & $741.42\,[733.91]\,(A_{2u})$
+  & $798.51\,[782.79]\,(A_2'')$
+  & $795.03\,[790.80]\,(A_{2u})$
+  & \makecell{$791.56\,[773.98]\,(A_2'')$ \\ $798.80\,[787.74]\,(A_2'')$
+             \\ $801.74\,[800.35]\,(A_1')$} \\
+
+ZO$_2$
+  & Silent $(809.78)$
+  & $796.63\,[774.74]\,(B_{1g})$
+  & --
+  & $799.98\,[791.80]\,(A_{1g})$
+  & -- \\
+
+TO
+  & $1367^{\rm c}\,(1378.4)$
+  & $1356.03\,[1345.91]\,(E_{1u})$
+  & $1351.82\,[1339.43]\,(E')$
+  & \makecell{$1353.63\,[1347.88]\,(E_{g})$ \\ $1353.69\,[1348.88]\,(E_{u})$}
+  & \makecell{$1354.05\,[1346.03]\,(E')$ \\ $1354.48\,[1349.01]\,(E'')$
+             \\ $1354.49\,[1349.10]\,(E')$} \\
+
+$E_{2g}$
+  & \makecell{$1366.2^{\rm b},\,1370^{\rm c},$ \\ $1364^{\rm d}\,(1379.20)$}
+  & $1356.06\,[1347.10]\,(E_{2g})$
+  & --
+  & --
+  & -- \\
+
+LO
+  & $1610^{\rm c}$
+  & $1591.36\,[1582.05]\,(E_{1u})$
+  & --\tnote{e}
+  & --\tnote{e}
+  & --\tnote{e} \\
+
+\bottomrule
+\end{tabular}
+\begin{tablenotes}
+\footnotesize
+\item[a] From \emph{ab initio} dispersion calculations, Ref.~\cite{Serrano2007}.
+\item[b] Experimental Raman data, Ref.~\cite{Nemanich1981}.
+\item[c] Experimental Raman and infrared data, Ref.~\cite{Geick1966}.
+\item[d] Experimental Raman data, Ref.~\cite{Reich2005}.
+\item[e] In two dimensions the LO--TO splitting vanishes at $\Gamma$; the
+in-plane optical modes listed under TO are degenerate at the zone centre and
+split linearly away from it.
+\end{tablenotes}
+\end{threeparttable}
+\end{table*}
