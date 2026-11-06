@@ -6,7 +6,7 @@ authors:
   - given-names: ""
     family-names: ""
     affiliation: "The University of Queensland"
-repository-code: "https://github.com/<user>/hbn-phonon-protocol"
+repository-code: "https://github.com/qorix-dft/hbn-phonon-protocol"
 license: MIT
 keywords:
   - phonons
